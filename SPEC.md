@@ -51,7 +51,8 @@ Use `unit`, `integration`, and `e2e` pytest markers. Run `.venv/bin/python check
 ### Work record
 
 - Issue: [RPS-001: Play a round](https://github.com/jasdeepn24/is218_rps_game/issues/1).
-- Pull request / CI: add actual URLs when they exist.
+- Pull request: [RPS-001: Play a round #2](https://github.com/jasdeepn24/is218_rps_game/pull/2).
+- CI: [Python checks for implementation commit 8c04ea0](https://github.com/jasdeepn24/is218_rps_game/actions/runs/41540993993). Verify Python checks on the latest PR commit before merging.
 - Implementation: [Winner rules](game.py) for one independent round, with the supplied interface and server unchanged.
 - Checks (2026-11-02): full `.venv/bin/python check.py` passed Black, Pylint, 23 non-browser tests, and 6 Chromium tests. [Rule and request tests](tests/test_game.py) cover all nine literal outcomes and a real Rock-versus-Paper request. [Browser test](tests/e2e/test_round.py) covers that loss and replay as Scissors versus Paper. Positive tests fix only randomness. Reviewed the diff and new test files against this spec; supplied checks and settings are unchanged.
 - Student browser review (2026-11-02): Scissors versus the computer's Paper displayed **You win!**; the student explained that Scissors beats Paper and reported selecting another move to play another round.
